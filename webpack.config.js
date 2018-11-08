@@ -8,5 +8,8 @@ module.exports = {
         contentBase: path.join(__dirname, 'public'),
         watchContentBase: true,
         port: 8080,
+    },
+    output: {
+        libraryTarget: 'umd'
     }
 };
