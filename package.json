@@ -10,7 +10,14 @@
   },
   "author": "Tom Misawa <riversun.org@gmail.com> (https://github.com/riversun)",
   "license": "ISC",
-  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riversun/es6hello.git"
+  },
+  "bugs": {
+    "url": "https://github.com/riversun/es6hello/issues"
+  },
+  "homepage": "https://github.com/riversun/es6hello#readme",
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
