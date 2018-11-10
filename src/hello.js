@@ -17,6 +17,7 @@ export default class Hello {
         
         const hello = 'Hi, there!';
         console.log(hello);
+
         return hello;
     }
 }

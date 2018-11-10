@@ -11,12 +11,12 @@ module.exports = {
     },
     entry: {app: './src/index.js'},
     output: {
+        path: path.join(__dirname, "dist"),
         publicPath: "/js/",
         filename: '[name].js',
         library: ["com", "example"],
         libraryTarget: 'umd'
     },
-    //devtool: 'inline-source-map',//ブラウザでのデバッグ用にソースマップを出力する
     module: {
         rules: [
             {
@@ -25,10 +25,20 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: [
+                            [
+                                "@babel/preset-env",
+                                {
+                                    "useBuiltIns": "usage",
+                                    "targets": "> 0.25%, not dead"
+                                }
+                            ]
+                        ]
                     }
                 }
             }
         ]
-    }
+    },
+    devtool: 'inline-source-map'
+
 };
